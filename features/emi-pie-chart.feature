@@ -1,9 +1,19 @@
-Feature: EMI calculator pie chart validation
-  As a borrower
+Feature: EMI Calculator Pie Chart Validation
+
+  As a user
   I want to validate the EMI amount and pie chart breakdown
   So that I can confirm the values shown by the application
 
-  Scenario: Validate EMI and pie chart for scenario A
+  Scenario Outline: Validate EMI amount and pie chart for multiple scenarios
     Given the EMI calculator application URL is launched
     When I navigate to the Home Loan tab
-   
+    And I enter a home loan amount of "<homeLoanAmount>"
+    And I enter an interest rate of "<interestRate>"
+    And I enter a tenure of "<tenureYears> years"
+    Then the displayed EMI should match my calculated EMI
+    And the pie chart values should be greater than zero
+
+    Examples:
+      | scenario   | homeLoanAmount | interestRate | tenureYears |
+      | Scenario A | 25L            | 10%          | 10          |
+      | Scenario B | 50L            | 7.5%         | 15          |
