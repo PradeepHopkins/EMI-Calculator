@@ -1,5 +1,5 @@
 import { createBdd, test } from 'playwright-bdd';
-import { EmiCalculatorPage } from '../pages/emi-calculator.page';
+import { EmiCalculatorPage } from '../pages/home-loan.page';
 import { expect } from '@playwright/test';
 import { calculateEmi, parseInterestRate, parseLoanAmount, parseTenureYears } from '../utils/emi-utils';
 
