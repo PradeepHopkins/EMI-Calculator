@@ -6,6 +6,8 @@
   "scripts": {
     "bddgen": "bddgen",
     "test": "npm run bddgen && playwright test",
+    "test:api": "playwright test -c playwright.api.config.ts",
+    "test:api:headed": "playwright test -c playwright.api.config.ts --headed",
     "test:headed": "npm run bddgen && playwright test --headed",
     "test:debug": "npm run bddgen && playwright test --debug",
     "test:chromium": "npm run bddgen && playwright test --project=chromium",
