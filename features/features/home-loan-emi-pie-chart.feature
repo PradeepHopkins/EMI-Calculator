@@ -1,10 +1,10 @@
-Feature: EMI Calculator Pie Chart Validation
+Feature: Home Loan EMI EMI Pie Chart Validation
 
   As a user
-  I want to validate the EMI amount and pie chart breakdown
+  I want to validate the EMI amount and pie chart Home Loan
   So that I can confirm the values shown by the application
 
-  Scenario Outline: Validate EMI amount and pie chart for multiple scenarios
+  Scenario Outline: Validate Home Loan EMI amount and pie chart for multiple scenarios
     Given the EMI calculator application URL is launched
     When I navigate to the Home Loan tab
     And I enter a home loan amount of "<homeLoanAmount>"
