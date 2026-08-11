@@ -1,14 +1,14 @@
 import { createBdd, test } from 'playwright-bdd';
-import { EmiCalculatorPage } from '../../pages/home-loan.page';
+import { EmiCalculatorPage } from '../pages/home-loan.page';
 import { expect } from '@playwright/test';
-import { calculateEmi, parseInterestRate, parseLoanAmount, parseTenureYears } from '../../utils/emi-utils';
+import { calculateEmi, parseInterestRate, parseLoanAmount, parseTenureYears } from '../utils/emi-utils';
 
 const { Given, When, Then } = createBdd(test);
 
 let pageObject: EmiCalculatorPage;
 let currentScenario: { principal: number; interestRate: number; tenureYears: number } | undefined;
 
-Given('the EMI calculator application URL is launched', async ({ page }) => {
+Given('the EMI calculator application URL is launched for Home Loan', async ({ page }) => {
   pageObject = new EmiCalculatorPage(page);
   await pageObject.openApplication();
 });

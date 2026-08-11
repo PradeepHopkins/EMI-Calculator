@@ -5,8 +5,8 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 const bddConfig = defineBddConfig({
-  features: 'features/**/*.feature',
-  steps: 'step-definitions/**/*.ts',
+  features: 'features/*.feature',
+  steps: 'step-definitions/*.ts',
   outputDir: '.features-gen',
 });
 
